@@ -13,7 +13,7 @@ public class Task5 {
     public static int randomInRange(int min, int max){
         return (int)( Math.random() * (max - min + 1) ) + min;
     }
-    public static int randomPrimeInRange(int min, int max){
+    public static int generateRandomPrime(int min, int max){
         if(min >= max) return -1;
         int randomNumber = randomInRange(min,max);
         while(!isPrime(randomNumber)){
@@ -24,7 +24,7 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        System.out.println(randomPrimeInRange(10,20));
+        System.out.println(generateRandomPrime(10,20));
     }
 
 }
